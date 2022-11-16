@@ -13,7 +13,7 @@ if (number >= 0)
 {
     while (Count <= number)
     {
-        Console.Write(Count + " ");
+        Console.Write($"{Count} ");
         Count++;
     }
 }
