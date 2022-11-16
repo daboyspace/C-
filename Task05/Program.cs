@@ -5,3 +5,23 @@
 // Например:
 // 4-> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
 // 2-> "-2, -1, 0, 1, 2"
+
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+int Count = -number;
+if (number >= 0)
+{
+while (Count <= number)
+{
+    Console.Write(Count+" ");
+    Count++;
+}
+}
+else
+{
+    while (Count >= number)
+{
+    Console.Write(Count+" ");
+    Count--;
+}
+}
