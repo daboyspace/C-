@@ -11,17 +11,17 @@ int number = Convert.ToInt32(Console.ReadLine());
 int Count = -number;
 if (number >= 0)
 {
-while (Count <= number)
-{
-    Console.Write(Count+" ");
-    Count++;
+    while (Count <= number)
+    {
+        Console.Write(Count + " ");
+        Count++;
+    }
 }
-}
-else
-{
-    while (Count >= number)
-{
-    Console.Write(Count+" ");
-    Count--;
-}
-}
+// else
+// {
+//     while (Count >= number)
+// {
+//     Console.Write(Count+" ");
+//     Count--;
+// }
+// }
