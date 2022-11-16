@@ -17,6 +17,7 @@ if (number >= 0)
         Count++;
     }
 }
+else Console.Write("Введено некорректное значение");
 // else
 // {
 //     while (Count >= number)
