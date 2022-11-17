@@ -18,7 +18,7 @@ bool Multiplicity(int number1, int number2)
 }
 
 // int MultiplicitySecond(int number1, int number2)
-// {
+// { 
 //     return number1 % number2;
 // }
 
