@@ -8,14 +8,14 @@
 // 25, 5 -> да
 // 8, 9 -> нет
 
-Console.WriteLine("Введите первое число: ");
-int num1 = Convert.Toint32(Console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int num2 = Convert.Toint32(Console.ReadLine());
+Console.WriteLine("Введите первое число:");
+int num1= Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число:");
+int num2= Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(square(num1, num2) ? "да" : "нет");
+Console.WriteLine(Square(num1, num2) ? "да" : "нет");
 
-bool square(int firstNum, int secondNum)
+bool Square(int firstNum, int secondNum)
 {
-    return (firstNum == secondNum * secondNum)(secondNum == firstNum * firstNum);
+    return (firstNum == secondNum*secondNum) || (secondNum == firstNum * firstNum);
 }
