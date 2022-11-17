@@ -8,7 +8,7 @@
 // 918 -> 8
 
 int number = new Random().Next(100, 1000);
-Console.WriteLine(number);
+Console.WriteLine($"Случайное трёхзначное чило = {number}");
 int RemoveSecondDigit(int numb)
 {
     int firstDigit = numb / 100;
@@ -16,5 +16,5 @@ int RemoveSecondDigit(int numb)
     int result = firstDigit * 10 + secondDigit;
     return result;
 }
-
-Console.WriteLine(RemoveSecondDigit(number));
+Console.WriteLine("Удаляем вторую цифру числа");
+Console.WriteLine($"Результат = {RemoveSecondDigit(number)}");
