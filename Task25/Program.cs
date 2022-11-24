@@ -12,28 +12,26 @@ double number = Convert.ToDouble(Console.ReadLine());
 Console.Write($"Введите степень, в которую хотите возвести число: ");
 double degree = Convert.ToInt32(Console.ReadLine());
 
-
-
 double result = RiseDegree(number, degree);
 Console.WriteLine($"---> {result}");
 
-
-
-
-double RiseDegree(double number, double degree) 
+double RiseDegree(double number, double degree)
 {
-    if (degree == 0) return 1; 
+    if (degree == 0) return 1;
 
     double copyNum = number;
-    
-    if (degree > 0) { 
-        for (int i = 1; i < degree; i++) {
+
+    if (degree > 0)
+    {
+        for (int i = 1; i < degree; i++)
+        {
             number *= copyNum;
         }
-    } else 
+    }
+    else
     {
-        degree *= -1; 
-        for (int i = 1; i < degree; i++) 
+        degree *= -1;
+        for (int i = 1; i < degree; i++)
         {
             number *= copyNum;
         }
@@ -41,5 +39,5 @@ double RiseDegree(double number, double degree)
         number = 1 / number;
     }
 
-    return number; 
+    return number;
 }
