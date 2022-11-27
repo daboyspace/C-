@@ -40,3 +40,4 @@ PrintArray(array);
 int countElements = CountElements(array);
 if (countElements > 0) Console.WriteLine($"Количество двузначных элементов массива равно {countElements}");
 else Console.WriteLine("Двузначных чисел в массиве нет");
+
