@@ -23,38 +23,39 @@ void PrintMatrix(int[,] matrix)
 
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        Console.Write("|");
+        Console.Write("");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4} ");
             else Console.Write($"{matrix[i, j],4} ");
         }
-        Console.WriteLine("|");
+        Console.WriteLine("");
     }
 }
 
-int[,] CreateModifiedMatrix(int[,] matrix)
+bool CheckSquareMatrix(int[,] matrix)
 {
-    int[,] matrix2 = new int[matrix.GetLength(0), matrix.GetLength(1)];
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    return matrix.GetLength(0) == matrix.GetLength(1);
+}
+void ReplaceRowsColumnsMatrix(int[,] matrix)
+{
+    int rows = matrix.GetLength(0);
+    int columns = matrix.GetLength(1);
+    for (int i = 0; i < rows - 1; i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = i + 1; j < columns; j++)
         {
-            matrix2[i, j] = matrix[j, i];
+            int temp = matrix[i, j];
+            matrix[i, j] = matrix[j, i];
+            matrix[j, i] = temp;
         }
     }
-    return matrix2;
 }
 
-int[,] matrix = CreateMatrixRndInt(4, 4, 0, 5);
-PrintMatrix(matrix);
+int[,] matrix1 = CreateMatrixRndInt(4, 4, 1, 9);
+PrintMatrix(matrix1);
 Console.WriteLine();
-if (matrix.GetLength(0) != matrix.GetLength(1))
-{
-    Console.WriteLine("Замена невозможна.");
-}
-else
-{
-    int[,] matrix2 = CreateModifiedMatrix(matrix); Console.WriteLine("Замена невозможна.");
-    PrintMatrix(matrix2);
-}
+ReplaceRowsColumnsMatrix(matrix1);
+if (CheckSquareMatrix(matrix1) == false)
+    Console.WriteLine("Это невозможно");
+else PrintMatrix(matrix1);
